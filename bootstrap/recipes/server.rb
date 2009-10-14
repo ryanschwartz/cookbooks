@@ -75,6 +75,7 @@ end
 
 %w{ openid cache search_index openid/cstore openid/store }.each do |dir|
   directory "#{node[:bootstrap][:chef][:path]}/#{dir}" do
+    recursive true
     owner "root"
     group root_group
     mode "755"
@@ -82,12 +83,14 @@ end
 end
 
 directory "/etc/chef/certificates" do
+  recursive true
   owner "root"
   group root_group
   mode "700"
 end
 
 directory node[:bootstrap][:chef][:run_path] do
+  recursive true
   owner "root"
   group root_group
   mode "755"

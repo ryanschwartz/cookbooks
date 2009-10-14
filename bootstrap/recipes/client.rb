@@ -71,6 +71,7 @@ chef_dirs = [
 
 chef_dirs.each do |dir|
   directory dir do
+    recursive true
     owner "root"
     group root_group
     mode "755"

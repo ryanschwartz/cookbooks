@@ -25,7 +25,7 @@ set_unless[:bootstrap][:chef][:url_type]   = "http"
 set_unless[:bootstrap][:chef][:init_style] = "runit"
 set_unless[:bootstrap][:chef][:path]       = "/srv/chef"
 set_unless[:bootstrap][:chef][:run_path]   = "/var/run/chef"
-set_unless[:bootstrap][:chef][:cache_path] = "/#{bootstrap[:chef][:path]}/cache"
+set_unless[:bootstrap][:chef][:cache_path] = "#{bootstrap[:chef][:path]}/cache"
 set_unless[:bootstrap][:chef][:serve_path] = "/srv/chef"
 
 set_unless[:bootstrap][:chef][:server_version]  = "0.7.12"

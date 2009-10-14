@@ -55,10 +55,11 @@ end
 
 if node[:bootstrap][:chef][:server_log] == "STDOUT"
   server_log = node[:bootstrap][:chef][:server_log]
+  indexer_log = node[:bootstrap][:chef][:indexer_log]
   show_time  = "false"
 else
-  server_log = "\"#{node[:bootstrap][:chef][:server_log]}\""
-  indexer_log = "\"#{node[:bootstrap][:chef][:indexer_log]}\""
+  server_log = node[:bootstrap][:chef][:server_log]
+  indexer_log = node[:bootstrap][:chef][:indexer_log]
   show_time  = "true"
 end
 

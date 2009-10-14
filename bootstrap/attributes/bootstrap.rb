@@ -40,9 +40,9 @@ when "runit"
   set_unless[:bootstrap][:chef][:server_log]  = "STDOUT"
   set_unless[:bootstrap][:chef][:indexer_log] = "STDOUT"
 else
-  set_unless[:bootstrap][:chef][:client_log]  = "#{bootstrap[:chef][:log_dir]}/client.log"
-  set_unless[:bootstrap][:chef][:server_log]  = "#{bootstrap[:chef][:log_dir]}/server.log"
-  set_unless[:bootstrap][:chef][:indexer_log] = "#{bootstrap[:chef][:log_dir]}/indexer.log"
+  set_unless[:bootstrap][:chef][:client_log]  = "\"#{bootstrap[:chef][:log_dir]}/client.log\""
+  set_unless[:bootstrap][:chef][:server_log]  = "\"#{bootstrap[:chef][:log_dir]}/server.log\""
+  set_unless[:bootstrap][:chef][:indexer_log] = "\"#{bootstrap[:chef][:log_dir]}/indexer.log\""
 end
 
 set_unless[:bootstrap][:chef][:server_fqdn]  = domain ? "chef.#{domain}" : "chef"

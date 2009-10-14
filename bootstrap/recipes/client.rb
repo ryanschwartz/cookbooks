@@ -36,7 +36,7 @@ when "runit"
   include_recipe "runit"
   runit_service "chef-client"
 when "init"
-  client_log = "\"#{node[:bootstrap][:chef][:client_log]}\""
+  client_log = node[:bootstrap][:chef][:client_log]
   show_time  = "true"
 
   directory node[:bootstrap][:chef][:run_path] do
